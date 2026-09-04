@@ -32,7 +32,8 @@ The easiest way to get started is with the included dev container — dependenci
 
 ![Screenshot of the Reopen in Container dialog from VSCode](docs/images/reopen-in-container.png)
 
-The first time takes a few minutes to configure while the necessary images are downloaded and dependencies install. After the container opens VSCode may warning about an auto-configured task to run. Accept the task, and the frontend will start.
+The first time takes a few minutes to configure while the necessary images are downloaded and dependencies install. To run the frontend,
+type `npm run dev` in a terminal window.
 
 The frontend is served at `http://localhost:5173`.
 
@@ -54,9 +55,11 @@ The backend will connect to the frontend dev server at `localhost:5173` and load
 #### Publishing the backend
 
 To publish the MobiFlight Connector backend, run the following command from the repository root on the terminal:
+
 ```sh
 dotnet publish "src/MobiFlightConnector/MobiFlightConnector.csproj" -c "Release" -p:Version="0.0.0.1" -o "dist/MobiFlightConnector-0.0.0.1" --self-contained
 ```
+
 [^1]
 
 [^1]: You can choose any version number starting with 0.0., but some features will be disabled, for example checking for a version update.
